@@ -1,5 +1,351 @@
-@import "compass/reset";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
+@import "compass/utilities/sprites";
+@import "compass/reset";
+@import "variables";
+@import "mixins";
+@import "icons/*.png";
+@include all-icons-sprites(true);
+
+$spaceamounts: (5, 10, 20, 40, 50, 75); // Adjust this to include the pixel amounts you need.
+$sides: (top, bottom, left, right); // Leave this variable alone
+
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .m-#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}% !important;
+    }
+
+    .p-#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}% !important;
+    }
+  }
+}
 body {
   font-family: "Myriad Pro", Times, serif;
+  h2{
+    @include title(48px, #000000, false, false);
+  }
+}
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.container--justify-end{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.container--wrap-no{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.container--grow-1{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+.phoneNumber{
+  font-size: 16px;
+  color: #aeaeae;
+}
+.burger {
+  width: 20px;
+  margin-left: 40px;
+  div {
+    height: 2px;
+    background: #ffffff;
+    width: 100%;
+    margin-bottom: 4px;
+  }
+}
+.degree {
+  width: $circleD;
+  height: $circleD;
+  border-radius: 50%;
+  background-color: $red;
+  margin-left: $circleD*2;
+  div {
+    width: $circleD/2;
+    height: $circleD/2;
+    border-radius: 50%;
+    background: #ffffff;
+    margin: $circleD/4;
+  }
+}
+.header{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  .headerLeft{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    width: 58%;
+    background: #eff2f6;
+    padding: 45px 0 45px 10%;
+  }
+  .headerRight{
+    width: 22%;
+    background: #ff343d;
+    padding: 45px 10% 45px 0;
+    color: #ffffff;
+  }
+}
+.slider{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  overflow: hidden;
+  .sliderLeft{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    align-items: center;
+    width: 58%;
+    background: #eff2f6;
+    padding: 45px 0 45px 10%;
+    ul, li{
+      z-index: 99;
+      list-style: disc;
+      color: #aeaeae;
+    }
+    .sliderLeft__text{
+      z-index: 99;
+      h2{
+        @include title(54px, #000000, false, false);
+      }
+      p{
+        max-width: 305px;;
+      }
+    }
+  }
+  .sliderRight{
+    width: 22%;
+    background: #ff343d;
+    padding: 45px 10% 45px 0;
+    .sliderRight__imgContainer{
+      width: 400px;
+      position: relative;
+      div {
+        background-color: #ffffff;
+        border-radius: 50%;
+        height: 400px;
+        width: 400px;
+        text-align: center;
+        margin-left: -50%;
+        position: relative;
+        img {
+          width: 150%;
+          height: auto;
+          margin-left: -25%;
+        }
+      }
+    }
+  }
+}
+.fly{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  .flyLeft{
+    min-width: 187px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-grow: 1;
+    width: 18%;
+    padding: 140px 2% 140px 10%;
+    @include backgroundImage("../images/droneB.png", cover);
+  }
+  .flyRight{
+    min-width: 292px;
+    flex-grow: 1;
+    width: 59%;
+    padding-right: 10%;
+    @include backgroundImage("../images/road.png", cover);
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    display: flex;
+    .flyRight__imageHover{
+      background-color: rgba(0, 0, 0, 0.65);
+      width: 28%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      align-items: center;
+      justify-content: center;
+      padding: 20% 2%;
+      h2{
+        max-width: 240px;
+        @include title(false, #ffffff, false, false);
+      }
+    }
+    .flyRight__buttonContainer{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      align-items: center;
+      justify-content: flex-end;
+      div{
+        .button{
+          -ms-transform: rotate(-90deg);
+          -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+          border-radius: 30px;
+          color: #000000;
+          background: #ffffff;
+          padding: 15px 45px 15px 30px;
+          width: auto;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+.features{
+  text-align: center;
+  padding: 0 10%;
+  h2{
+    @include title(38px, #000000, 80px 0 40px, false);
+  }
+  .features__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: space-between;
+    padding: 45px 0 45px;
+  }
+}
+.feature{
+  div{
+    margin: 0 auto 15px;
+  }
+  h2{
+    @include title(24px, #000000, 25 0 70px, false);
+  }
+}
+.visionGeneration{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  .visionGenerationLeft{
+    width: 38%;
+    padding-right: 10%;
+    @include backgroundImage("../images/drone.jpg", cover);
+    flex-grow: 1;
+    min-width: 292px;
+    min-height: 400px;
+  }
+  .visionGenerationRight{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 37%;
+    min-width: 292px;
+    padding: 100px 10% 100px 5%;
+    @include backgroundImage("../images/droneC.png", cover);
+    justify-content: space-between;
+    color: #ffffff;
+    flex-grow: 1;
+    h2{
+      max-width: 430px;
+      font-size: 64px;
+      @include title(64px, #ffffff, false, false);
+    }
+    .button{
+      @include button(#ffffff, true, none, false);
+      margin: 50px 0;
+    }
+  }
+}
+.flyGeneration{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  .flyGenerationLeft{
+    width: 40%;
+    padding: 100px 0 100px 10%;
+    flex-grow: 1;
+    min-width: 292px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    h2{
+      font-size: 64px;
+      z-index: 99;
+      max-width: 430px;
+      @include title(64px, #000000, false, false);
+    }
+    .button{
+      @include button(#000000, true, #ffffff, false);
+      margin: 50px 0;
+    }
+  }
+  .flyGenerationRight{
+    flex-grow: 1;
+    width: 40%;
+    padding-right: 10%;
+    @include backgroundImage("../images/drone.png", 100%);
+    justify-content: space-between;
+    color: #ffffff;
+    min-width: 292px;
+    min-height: 400px;
+  }
+}
+.journey{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+  height: 650px;
+  @include backgroundImage("../images/bateau.jpg", cover);
+  h2{
+    @include title(60px, #ffffff, 0 0 50px -100px, false);
+    text-align: center;
+  }
+  .button{
+    @include button(#318f76, false, #ffffff, false);
+    margin-bottom: 150px;
+  }
+}
+footer{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  .footerContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 40px 0;
+  }
+}
+.subtitle{
+  font-size: 16px;
+  color: #aeaeae;
+}
+.text-red{
+  color: $red!important;
 }

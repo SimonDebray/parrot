@@ -32,7 +32,7 @@ gulp.task("clean", function (){
 
 gulp.task("script", function (){
     return gulp.src("./js**/*.js")
-        .pipe(p.concat("app.js"))
+        .pipe(p.concat("main.js"))
         .pipe(p.uglify())
         .pipe(gulp.dest("./dist"))
 });

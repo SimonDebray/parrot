@@ -35,23 +35,74 @@
 </header>
 <main>
     <div class="slider">
-        <div class="sliderLeft">
-            <ul>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li class="text-red"><a href="#"></a></li>
-                <li><a href="#"></a></li>
-            </ul>
-            <div class="sliderLeft__text m-l-5 m-t-5">
-                <h2>PHANTOM</h2>
-                <p class="subtitle m-t-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, lorem ipsum dolor
-                    sit amet.</p>
-            </div>
-        </div>
-        <div class="sliderRight">
-            <div class="sliderRight__imgContainer">
-                <div>
-                    <img src="images/drone.png" alt="Drone Phantom">
+        <div class="slidesContainer swiper-container">
+            <div class="swiper-pagination"></div>
+            <div class="slides swiper-wrapper" id="slides">
+                <div class="slide swiper-slide" id="s1">
+                    <div class="sliderLeft">
+                        <div class="sliderLeft__text m-l-5 m-t-5">
+                            <h2 class="wow slideInLeft">PHANTOM</h2>
+                            <p class="subtitle m-t-5 wow slideInLeft">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, lorem ipsum dolor
+                                sit amet.1
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sliderRight">
+                        <div class="sliderRight__imgContainer wow slideInRight">
+                            <div>
+                                <img src="images/drone.png" alt="Drone Phantom">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide swiper-slide" id="s2">
+                    <div class="sliderLeft">
+                        <div class="sliderLeft__text m-l-5 m-t-5">
+                            <h2>PHANTOM</h2>
+                            <p class="subtitle m-t-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, lorem ipsum dolor
+                                sit amet.2</p>
+                        </div>
+                    </div>
+                    <div class="sliderRight">
+                        <div class="sliderRight__imgContainer">
+                            <div>
+                                <img src="images/drone2.png" alt="Drone Phantom">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide swiper-slide" id="s3">
+                    <div class="sliderLeft">
+                        <div class="sliderLeft__text m-l-5 m-t-5">
+                            <h2>PHANTOM</h2>
+                            <p class="subtitle m-t-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, lorem ipsum dolor
+                                sit amet.3</p>
+                        </div>
+                    </div>
+                    <div class="sliderRight">
+                        <div class="sliderRight__imgContainer">
+                            <div>
+                                <img src="images/drone3.png" alt="Drone Phantom">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide swiper-slide" id="s4">
+                    <div class="sliderLeft">
+                        <div class="sliderLeft__text m-l-5 m-t-5">
+                            <h2>PHANTOM</h2>
+                            <p class="subtitle m-t-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, lorem ipsum dolor
+                                sit amet.4</p>
+                        </div>
+                    </div>
+                    <div class="sliderRight">
+                        <div class="sliderRight__imgContainer">
+                            <div>
+                                <img src="images/drone4.png" alt="Drone Phantom">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -75,19 +126,19 @@
     <div class="features">
         <h2>Features</h2>
         <div class="features__container">
-            <article class="feature">
+            <article class="feature wow slideInLeft">
                 <div class="icons-sprite icons-f1"></div>
                 <h2>New technology</h2>
             </article>
-            <article class="feature">
+            <article class="feature wow slideInLeft">
                 <div class="icons-sprite icons-f2"></div>
                 <h2>Good signal</h2>
             </article>
-            <article class="feature">
+            <article class="feature wow slideInRight">
                 <div class="icons-sprite icons-f3"></div>
                 <h2>Easy to use</h2>
             </article>
-            <article class="feature">
+            <article class="feature wow slideInRight">
                 <div class="icons-sprite icons-f4"></div>
                 <h2>Visibility</h2>
             </article>
@@ -96,24 +147,24 @@
     <div class="visionGeneration">
         <div class="visionGenerationLeft"></div>
         <div class="visionGenerationRight">
-            <h2>
+            <h2 class="wow slideInRight">
                 New <span class="text-red">generation</span> of vision<span class="text-red">.</span>
             </h2>
-            <div class="button">VIEW MORE</div>
+            <div class="button wow slideInRight">VIEW MORE</div>
         </div>
     </div>
     <div class="flyGeneration">
         <div class="flyGenerationLeft">
-            <h2>
+            <h2 class="wow slideInLeft">
                 New <span class="text-red">generation</span> of flying<span class="text-red">.</span>
             </h2>
-            <div class="button">PRODUCTS</div>
+            <div class="button wow slideInLeft">PRODUCTS</div>
         </div>
         <div class="flyGenerationRight"></div>
     </div>
     <div class="journey">
-        <h2>Start your journey.</h2>
-        <div class="button">VIEW MORE</div>
+        <h2 class="wow slideInLeft">Start your journey.</h2>
+        <div class="button wow slideInRight">VIEW MORE</div>
     </div>
 </main>
 <footer>
@@ -125,6 +176,16 @@
     </div>
     <p class="subtitle">&copy; 2016 Copyright . All rights reserved by Symu.co</p>
 </footer>
-<script src="js/main.js"></script>
+<script src="dist/main.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        direction: 'vertical'
+    });
+</script>
+<script>
+    new WOW().init();
+</script>
 </body>
 </html>

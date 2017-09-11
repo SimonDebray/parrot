@@ -2,86 +2,350 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
-@import "compass/utilities/sprites";
-@import "compass/reset";
-@import "variables";
-@import "mixins";
-@import "icons/*.png";
-@include all-icons-sprites(true);
-
-$spaceamounts: (5, 10, 20, 40, 50, 75); // Adjust this to include the pixel amounts you need.
-$sides: (top, bottom, left, right); // Leave this variable alone
-
-
-@each $space in $spaceamounts {
-  @each $side in $sides {
-    .m-#{str-slice($side, 0, 1)}-#{$space} {
-      margin-#{$side}: #{$space}% !important;
-    }
-
-    .p-#{str-slice($side, 0, 1)}-#{$space} {
-      padding-#{$side}: #{$space}% !important;
-    }
-  }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
 }
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+.icons-sprite, .icons-f1, .icons-f2, .icons-f3, .icons-f4 {
+  background-image: url('../images/icons-s6a5e65d34e.png');
+  background-repeat: no-repeat;
+}
+
+.icons-f1 {
+  background-position: 0 0;
+  height: 91px;
+  width: 91px;
+}
+
+.icons-f2 {
+  background-position: 0 -91px;
+  height: 91px;
+  width: 91px;
+}
+
+.icons-f3 {
+  background-position: 0 -182px;
+  height: 91px;
+  width: 91px;
+}
+
+.icons-f4 {
+  background-position: 0 -273px;
+  height: 91px;
+  width: 91px;
+}
+
+.m-t-5 {
+  margin-top: 5% !important;
+}
+
+.p-t-5 {
+  padding-top: 5% !important;
+}
+
+.m-b-5 {
+  margin-bottom: 5% !important;
+}
+
+.p-b-5 {
+  padding-bottom: 5% !important;
+}
+
+.m-l-5 {
+  margin-left: 5% !important;
+}
+
+.p-l-5 {
+  padding-left: 5% !important;
+}
+
+.m-r-5 {
+  margin-right: 5% !important;
+}
+
+.p-r-5 {
+  padding-right: 5% !important;
+}
+
+.m-t-10 {
+  margin-top: 10% !important;
+}
+
+.p-t-10 {
+  padding-top: 10% !important;
+}
+
+.m-b-10 {
+  margin-bottom: 10% !important;
+}
+
+.p-b-10 {
+  padding-bottom: 10% !important;
+}
+
+.m-l-10 {
+  margin-left: 10% !important;
+}
+
+.p-l-10 {
+  padding-left: 10% !important;
+}
+
+.m-r-10 {
+  margin-right: 10% !important;
+}
+
+.p-r-10 {
+  padding-right: 10% !important;
+}
+
+.m-t-20 {
+  margin-top: 20% !important;
+}
+
+.p-t-20 {
+  padding-top: 20% !important;
+}
+
+.m-b-20 {
+  margin-bottom: 20% !important;
+}
+
+.p-b-20 {
+  padding-bottom: 20% !important;
+}
+
+.m-l-20 {
+  margin-left: 20% !important;
+}
+
+.p-l-20 {
+  padding-left: 20% !important;
+}
+
+.m-r-20 {
+  margin-right: 20% !important;
+}
+
+.p-r-20 {
+  padding-right: 20% !important;
+}
+
+.m-t-40 {
+  margin-top: 40% !important;
+}
+
+.p-t-40 {
+  padding-top: 40% !important;
+}
+
+.m-b-40 {
+  margin-bottom: 40% !important;
+}
+
+.p-b-40 {
+  padding-bottom: 40% !important;
+}
+
+.m-l-40 {
+  margin-left: 40% !important;
+}
+
+.p-l-40 {
+  padding-left: 40% !important;
+}
+
+.m-r-40 {
+  margin-right: 40% !important;
+}
+
+.p-r-40 {
+  padding-right: 40% !important;
+}
+
+.m-t-50 {
+  margin-top: 50% !important;
+}
+
+.p-t-50 {
+  padding-top: 50% !important;
+}
+
+.m-b-50 {
+  margin-bottom: 50% !important;
+}
+
+.p-b-50 {
+  padding-bottom: 50% !important;
+}
+
+.m-l-50 {
+  margin-left: 50% !important;
+}
+
+.p-l-50 {
+  padding-left: 50% !important;
+}
+
+.m-r-50 {
+  margin-right: 50% !important;
+}
+
+.p-r-50 {
+  padding-right: 50% !important;
+}
+
+.m-t-75 {
+  margin-top: 75% !important;
+}
+
+.p-t-75 {
+  padding-top: 75% !important;
+}
+
+.m-b-75 {
+  margin-bottom: 75% !important;
+}
+
+.p-b-75 {
+  padding-bottom: 75% !important;
+}
+
+.m-l-75 {
+  margin-left: 75% !important;
+}
+
+.p-l-75 {
+  padding-left: 75% !important;
+}
+
+.m-r-75 {
+  margin-right: 75% !important;
+}
+
+.p-r-75 {
+  padding-right: 75% !important;
+}
+
 body {
   font-family: "Myriad Pro", Times, serif;
-  h2{
-    @include title(48px, #000000, false, false);
-  }
 }
-.container{
+body h2 {
+  font-size: 48px;
+  width: 100%;
+  color: #000000;
+}
+
+.container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-.container--justify-end{
+
+.container--justify-end {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
-.container--wrap-no{
+
+.container--wrap-no {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
 }
-.container--grow-1{
+
+.container--grow-1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   flex-grow: 1;
 }
-.phoneNumber{
+
+.phoneNumber {
   font-size: 16px;
   color: #aeaeae;
 }
+
 .burger {
   width: 20px;
   margin-left: 40px;
-  div {
-    height: 2px;
-    background: #ffffff;
-    width: 100%;
-    margin-bottom: 4px;
-  }
 }
+.burger div {
+  height: 2px;
+  background: #ffffff;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
 .degree {
-  width: $circleD;
-  height: $circleD;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background-color: $red;
-  margin-left: $circleD*2;
-  div {
-    width: $circleD/2;
-    height: $circleD/2;
-    border-radius: 50%;
-    background: #ffffff;
-    margin: 2.2px;
-  }
+  background-color: #ff343d;
+  margin-left: 16px;
 }
-.header{
+.degree div {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #ffffff;
+  margin: 2.2px;
+}
+
+.header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -89,254 +353,288 @@ body {
   z-index: 1000;
   position: absolute;
   width: 100%;
-  top:0;
-  .headerLeft{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    width: 58%;
-    padding: 45px 0 45px 10%;
-  }
-  .headerRight{
-    width: 22%;
-    padding: 45px 10% 45px 0;
-    color: #ffffff;
-  }
+  top: 0;
 }
-.slider{
+.header .headerLeft {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  width: 58%;
+  padding: 45px 0 45px 10%;
+}
+.header .headerRight {
+  width: 22%;
+  padding: 45px 10% 45px 0;
+  color: #ffffff;
+}
+
+.slider {
   display: flex;
   flex-direction: row;
   flex-grow: 1;
   overflow: hidden;
   height: 650px;
 }
-.slidesContainer {
-  .slides {
-    .slide {
-      .sliderLeft {
-        display: flex;
-        flex-direction: row;
-        flex-grow: 1;
-        align-items: center;
-        width: 58%;
-        background: #eff2f6;
-        padding-left: 10%;
-        height: 650px;
-        .sliderLeft__text {
-          z-index: 99;
-          h2 {
-            @include title(54px, #000000, false, false);
-          }
-          p {
-            max-width: 305px;;
-          }
-        }
-      }
-      .sliderRight {
-        width: 22%;
-        background: #ff343d;
-        padding-right: 10%;
-        display: flex;
-        align-items: center;
-        height: 650px;
-        .sliderRight__imgContainer {
-          width: 400px;
-          position: relative;
-          div {
-            background-color: #ffffff;
-            border-radius: 50%;
-            height: 400px;
-            width: 400px;
-            text-align: center;
-            margin-left: -50%;
-            position: relative;
-            img {
-              width: 150%;
-              height: auto;
-              margin-left: -25%;
-            }
-          }
-        }
-      }
-    }
-  }
+
+.slidesContainer .slides .slide .sliderLeft {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: center;
+  width: 58%;
+  background: #eff2f6;
+  padding-left: 10%;
+  height: 650px;
+}
+.slidesContainer .slides .slide .sliderLeft .sliderLeft__text {
+  z-index: 99;
+}
+.slidesContainer .slides .slide .sliderLeft .sliderLeft__text h2 {
+  font-size: 54px;
+  width: 100%;
+  color: #000000;
+}
+.slidesContainer .slides .slide .sliderLeft .sliderLeft__text p {
+  max-width: 305px;
+}
+.slidesContainer .slides .slide .sliderRight {
+  width: 22%;
+  background: #ff343d;
+  padding-right: 10%;
+  display: flex;
+  align-items: center;
+  height: 650px;
+}
+.slidesContainer .slides .slide .sliderRight .sliderRight__imgContainer {
+  width: 400px;
+  position: relative;
+}
+.slidesContainer .slides .slide .sliderRight .sliderRight__imgContainer div {
+  background-color: #ffffff;
+  border-radius: 50%;
+  height: 400px;
+  width: 400px;
+  text-align: center;
+  margin-left: -50%;
+  position: relative;
+}
+.slidesContainer .slides .slide .sliderRight .sliderRight__imgContainer div img {
+  width: 150%;
+  height: auto;
+  margin-left: -25%;
 }
 
-.fly{
+.fly {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   flex-grow: 1;
-  .flyLeft{
-    min-width: 187px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    flex-grow: 1;
-    width: 18%;
-    padding: 140px 2% 140px 10%;
-    @include backgroundImage("../images/droneB.png", cover);
-  }
-  .flyRight{
-    min-width: 292px;
-    flex-grow: 1;
-    width: 59%;
-    padding-right: 10%;
-    @include backgroundImage("../images/road.png", cover);
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    display: flex;
-    .flyRight__imageHover{
-      background-color: rgba(0, 0, 0, 0.65);
-      width: 28%;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      flex-grow: 1;
-      align-items: center;
-      justify-content: center;
-      padding: 20% 2%;
-      h2{
-        max-width: 240px;
-        @include title(false, #ffffff, false, false);
-      }
-    }
-    .flyRight__buttonContainer{
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      flex-grow: 1;
-      align-items: center;
-      justify-content: flex-end;
-      div{
-        .button{
-          -ms-transform: rotate(-90deg);
-          -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-          border-radius: 30px;
-          color: #000000;
-          background: #ffffff;
-          padding: 15px 45px 15px 30px;
-          width: auto;
-          display: inline-block;
-        }
-      }
-    }
-  }
 }
-.features{
+.fly .flyLeft {
+  min-width: 187px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex-grow: 1;
+  width: 18%;
+  padding: 140px 2% 140px 10%;
+  background: url("../images/droneB.png") center no-repeat;
+  background-size: cover;
+}
+.fly .flyRight {
+  min-width: 292px;
+  flex-grow: 1;
+  width: 59%;
+  padding-right: 10%;
+  background: url("../images/road.png") center no-repeat;
+  background-size: cover;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  display: flex;
+}
+.fly .flyRight .flyRight__imageHover {
+  background-color: rgba(0, 0, 0, 0.65);
+  width: 28%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 20% 2%;
+}
+.fly .flyRight .flyRight__imageHover h2 {
+  max-width: 240px;
+  width: 100%;
+  color: #ffffff;
+}
+.fly .flyRight .flyRight__buttonContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: flex-end;
+}
+.fly .flyRight .flyRight__buttonContainer div .button {
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  border-radius: 30px;
+  color: #000000;
+  background: #ffffff;
+  padding: 15px 45px 15px 30px;
+  width: auto;
+  display: inline-block;
+}
+
+.features {
   text-align: center;
   padding: 0 10%;
-  h2{
-    @include title(38px, #000000, 80px 0 40px, false);
-  }
-  .features__container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    justify-content: space-between;
-    padding: 45px 0 45px;
-  }
 }
-.feature{
-  div{
-    margin: 0 auto 15px;
-  }
-  h2{
-    @include title(24px, #000000, 25 0 70px, false);
-  }
+.features h2 {
+  margin: 80px 0 40px;
+  font-size: 38px;
+  width: 100%;
+  color: #000000;
 }
-.visionGeneration{
+.features .features__container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   flex-grow: 1;
-  .visionGenerationLeft{
-    width: 38%;
-    padding-right: 10%;
-    @include backgroundImage("../images/drone.jpg", cover);
-    flex-grow: 1;
-    min-width: 292px;
-    min-height: 400px;
-  }
-  .visionGenerationRight{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 37%;
-    min-width: 292px;
-    padding: 100px 10% 100px 5%;
-    @include backgroundImage("../images/droneC.png", cover);
-    justify-content: space-between;
-    color: #ffffff;
-    flex-grow: 1;
-    h2{
-      max-width: 430px;
-      font-size: 64px;
-      @include title(64px, #ffffff, false, false);
-    }
-    .button{
-      @include button(#ffffff, true, none, false);
-      margin: 50px 0;
-    }
-  }
+  justify-content: space-between;
+  padding: 45px 0 45px;
 }
-.flyGeneration{
+
+.feature div {
+  margin: 0 auto 15px;
+}
+.feature h2 {
+  margin: 25 0 70px;
+  font-size: 24px;
+  width: 100%;
+  color: #000000;
+}
+
+.visionGeneration {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   flex-grow: 1;
-  .flyGenerationLeft{
-    width: 40%;
-    padding: 100px 0 100px 10%;
-    flex-grow: 1;
-    min-width: 292px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    h2{
-      font-size: 64px;
-      z-index: 99;
-      max-width: 430px;
-      @include title(64px, #000000, false, false);
-    }
-    .button{
-      @include button(#000000, true, #ffffff, false);
-      margin: 50px 0;
-    }
-  }
-  .flyGenerationRight{
-    flex-grow: 1;
-    width: 40%;
-    padding-right: 10%;
-    @include backgroundImage("../images/drone.png", 100%);
-    justify-content: space-between;
-    color: #ffffff;
-    min-width: 292px;
-    min-height: 400px;
-  }
 }
-.journey{
+.visionGeneration .visionGenerationLeft {
+  width: 38%;
+  padding-right: 10%;
+  background: url("../images/drone.jpg") center no-repeat;
+  background-size: cover;
+  flex-grow: 1;
+  min-width: 292px;
+  min-height: 400px;
+}
+.visionGeneration .visionGenerationRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 37%;
+  min-width: 292px;
+  padding: 100px 10% 100px 5%;
+  background: url("../images/droneC.png") center no-repeat;
+  background-size: cover;
+  justify-content: space-between;
+  color: #ffffff;
+  flex-grow: 1;
+}
+.visionGeneration .visionGenerationRight h2 {
+  max-width: 430px;
+  font-size: 64px;
+  font-size: 64px;
+  width: 100%;
+  color: #ffffff;
+}
+.visionGeneration .visionGenerationRight .button {
+  border: solid #aeaeae 2px;
+  border-radius: 30px;
+  color: #ffffff;
+  background: none;
+  padding: 15px 45px 15px 30px;
+  width: auto;
+  margin: 50px 0;
+}
+
+.flyGeneration {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+.flyGeneration .flyGenerationLeft {
+  width: 40%;
+  padding: 100px 0 100px 10%;
+  flex-grow: 1;
+  min-width: 292px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.flyGeneration .flyGenerationLeft h2 {
+  font-size: 64px;
+  z-index: 99;
+  max-width: 430px;
+  font-size: 64px;
+  width: 100%;
+  color: #000000;
+}
+.flyGeneration .flyGenerationLeft .button {
+  border: solid #aeaeae 2px;
+  border-radius: 30px;
+  color: #000000;
+  background: #ffffff;
+  padding: 15px 45px 15px 30px;
+  width: auto;
+  margin: 50px 0;
+}
+.flyGeneration .flyGenerationRight {
+  flex-grow: 1;
+  width: 40%;
+  padding-right: 10%;
+  background: url("../images/drone.png") center no-repeat;
+  background-size: 100%;
+  justify-content: space-between;
+  color: #ffffff;
+  min-width: 292px;
+  min-height: 400px;
+}
+
+.journey {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   flex-grow: 1;
   height: 650px;
-  @include backgroundImage("../images/bateau.jpg", cover);
-  h2{
-    @include title(60px, #ffffff, 0 0 50px -100px, false);
-    text-align: center;
-  }
-  .button{
-    @include button(#318f76, false, #ffffff, false);
-    margin-bottom: 150px;
-  }
+  background: url("../images/bateau.jpg") center no-repeat;
+  background-size: cover;
 }
-footer{
+.journey h2 {
+  margin: 0 0 50px -100px;
+  font-size: 60px;
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+}
+.journey .button {
+  border-radius: 30px;
+  color: #318f76;
+  background: #ffffff;
+  padding: 15px 45px 15px 30px;
+  width: auto;
+  margin-bottom: 150px;
+}
+
+footer {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -344,25 +642,26 @@ footer{
   align-items: center;
   justify-content: center;
   height: 400px;
-  .footerContent{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 40px 0;
-  }
 }
-.subtitle{
+footer .footerContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.subtitle {
   font-size: 16px;
   color: #aeaeae;
 }
-.text-red{
-  color: $red!important;
-}
-.background-red{
-  background-color: $red!important;
+
+.text-red {
+  color: #ff343d !important;
 }
 
-@charset "UTF-8";
+.background-red {
+  background-color: #ff343d !important;
+}
 
 /*!
  * animate.css -http://daneden.me/animate
@@ -371,7 +670,6 @@ footer{
  *
  * Copyright (c) 2017 Daniel Eden
  */
-
 .animated {
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -394,25 +692,21 @@ footer{
 
 @keyframes bounce {
   from, 20%, 53%, 80%, to {
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    transform: translate3d(0,0,0);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0);
   }
-
   40%, 43% {
-    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
     transform: translate3d(0, -30px, 0);
   }
-
   70% {
-    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
     transform: translate3d(0, -15px, 0);
   }
-
   90% {
-    transform: translate3d(0,-4px,0);
+    transform: translate3d(0, -4px, 0);
   }
 }
-
 .bounce {
   animation-name: bounce;
   transform-origin: center bottom;
@@ -422,32 +716,26 @@ footer{
   from, 50%, to {
     opacity: 1;
   }
-
   25%, 75% {
     opacity: 0;
   }
 }
-
 .flash {
   animation-name: flash;
 }
 
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
-
 @keyframes pulse {
   from {
     transform: scale3d(1, 1, 1);
   }
-
   50% {
     transform: scale3d(1.05, 1.05, 1.05);
   }
-
   to {
     transform: scale3d(1, 1, 1);
   }
 }
-
 .pulse {
   animation-name: pulse;
 }
@@ -456,32 +744,25 @@ footer{
   from {
     transform: scale3d(1, 1, 1);
   }
-
   30% {
     transform: scale3d(1.25, 0.75, 1);
   }
-
   40% {
     transform: scale3d(0.75, 1.25, 1);
   }
-
   50% {
     transform: scale3d(1.15, 0.85, 1);
   }
-
   65% {
-    transform: scale3d(.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
   }
-
   75% {
-    transform: scale3d(1.05, .95, 1);
+    transform: scale3d(1.05, 0.95, 1);
   }
-
   to {
     transform: scale3d(1, 1, 1);
   }
 }
-
 .rubberBand {
   animation-name: rubberBand;
 }
@@ -490,16 +771,13 @@ footer{
   from, to {
     transform: translate3d(0, 0, 0);
   }
-
   10%, 30%, 50%, 70%, 90% {
     transform: translate3d(-10px, 0, 0);
   }
-
   20%, 40%, 60%, 80% {
     transform: translate3d(10px, 0, 0);
   }
 }
-
 .shake {
   animation-name: shake;
 }
@@ -508,28 +786,22 @@ footer{
   0% {
     transform: translateX(0);
   }
-
   6.5% {
     transform: translateX(-6px) rotateY(-9deg);
   }
-
   18.5% {
     transform: translateX(5px) rotateY(7deg);
   }
-
   31.5% {
     transform: translateX(-3px) rotateY(-5deg);
   }
-
   43.5% {
     transform: translateX(2px) rotateY(3deg);
   }
-
   50% {
     transform: translateX(0);
   }
 }
-
 .headShake {
   animation-timing-function: ease-in-out;
   animation-name: headShake;
@@ -539,24 +811,19 @@ footer{
   20% {
     transform: rotate3d(0, 0, 1, 15deg);
   }
-
   40% {
     transform: rotate3d(0, 0, 1, -10deg);
   }
-
   60% {
     transform: rotate3d(0, 0, 1, 5deg);
   }
-
   80% {
     transform: rotate3d(0, 0, 1, -5deg);
   }
-
   to {
     transform: rotate3d(0, 0, 1, 0deg);
   }
 }
-
 .swing {
   transform-origin: top center;
   animation-name: swing;
@@ -566,60 +833,47 @@ footer{
   from {
     transform: scale3d(1, 1, 1);
   }
-
   10%, 20% {
-    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
   }
-
   30%, 50%, 70%, 90% {
     transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
   }
-
   40%, 60%, 80% {
     transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
   }
-
   to {
     transform: scale3d(1, 1, 1);
   }
 }
-
 .tada {
   animation-name: tada;
 }
 
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
-
 @keyframes wobble {
   from {
     transform: none;
   }
-
   15% {
     transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
   }
-
   30% {
     transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
   }
-
   45% {
     transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
   }
-
   60% {
     transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
   }
-
   75% {
     transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
   }
-
   to {
     transform: none;
   }
 }
-
 .wobble {
   animation-name: wobble;
 }
@@ -628,36 +882,28 @@ footer{
   from, 11.1%, to {
     transform: none;
   }
-
   22.2% {
     transform: skewX(-12.5deg) skewY(-12.5deg);
   }
-
   33.3% {
     transform: skewX(6.25deg) skewY(6.25deg);
   }
-
   44.4% {
     transform: skewX(-3.125deg) skewY(-3.125deg);
   }
-
   55.5% {
     transform: skewX(1.5625deg) skewY(1.5625deg);
   }
-
   66.6% {
     transform: skewX(-0.78125deg) skewY(-0.78125deg);
   }
-
   77.7% {
-    transform: skewX(0.390625deg) skewY(0.390625deg);
+    transform: skewX(0.39063deg) skewY(0.39063deg);
   }
-
   88.8% {
-    transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+    transform: skewX(-0.19531deg) skewY(-0.19531deg);
   }
 }
-
 .jello {
   animation-name: jello;
   transform-origin: center;
@@ -665,185 +911,151 @@ footer{
 
 @keyframes bounceIn {
   from, 20%, 40%, 60%, 80%, to {
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
-
   0% {
     opacity: 0;
-    transform: scale3d(.3, .3, .3);
+    transform: scale3d(0.3, 0.3, 0.3);
   }
-
   20% {
     transform: scale3d(1.1, 1.1, 1.1);
   }
-
   40% {
-    transform: scale3d(.9, .9, .9);
+    transform: scale3d(0.9, 0.9, 0.9);
   }
-
   60% {
     opacity: 1;
     transform: scale3d(1.03, 1.03, 1.03);
   }
-
   80% {
-    transform: scale3d(.97, .97, .97);
+    transform: scale3d(0.97, 0.97, 0.97);
   }
-
   to {
     opacity: 1;
     transform: scale3d(1, 1, 1);
   }
 }
-
 .bounceIn {
   animation-name: bounceIn;
 }
 
 @keyframes bounceInDown {
   from, 60%, 75%, 90%, to {
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
-
   0% {
     opacity: 0;
     transform: translate3d(0, -3000px, 0);
   }
-
   60% {
     opacity: 1;
     transform: translate3d(0, 25px, 0);
   }
-
   75% {
     transform: translate3d(0, -10px, 0);
   }
-
   90% {
     transform: translate3d(0, 5px, 0);
   }
-
   to {
     transform: none;
   }
 }
-
 .bounceInDown {
   animation-name: bounceInDown;
 }
 
 @keyframes bounceInLeft {
   from, 60%, 75%, 90%, to {
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
-
   0% {
     opacity: 0;
     transform: translate3d(-3000px, 0, 0);
   }
-
   60% {
     opacity: 1;
     transform: translate3d(25px, 0, 0);
   }
-
   75% {
     transform: translate3d(-10px, 0, 0);
   }
-
   90% {
     transform: translate3d(5px, 0, 0);
   }
-
   to {
     transform: none;
   }
 }
-
 .bounceInLeft {
   animation-name: bounceInLeft;
 }
 
 @keyframes bounceInRight {
   from, 60%, 75%, 90%, to {
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
-
   from {
     opacity: 0;
     transform: translate3d(3000px, 0, 0);
   }
-
   60% {
     opacity: 1;
     transform: translate3d(-25px, 0, 0);
   }
-
   75% {
     transform: translate3d(10px, 0, 0);
   }
-
   90% {
     transform: translate3d(-5px, 0, 0);
   }
-
   to {
     transform: none;
   }
 }
-
 .bounceInRight {
   animation-name: bounceInRight;
 }
 
 @keyframes bounceInUp {
   from, 60%, 75%, 90%, to {
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
-
   from {
     opacity: 0;
     transform: translate3d(0, 3000px, 0);
   }
-
   60% {
     opacity: 1;
     transform: translate3d(0, -20px, 0);
   }
-
   75% {
     transform: translate3d(0, 10px, 0);
   }
-
   90% {
     transform: translate3d(0, -5px, 0);
   }
-
   to {
     transform: translate3d(0, 0, 0);
   }
 }
-
 .bounceInUp {
   animation-name: bounceInUp;
 }
 
 @keyframes bounceOut {
   20% {
-    transform: scale3d(.9, .9, .9);
+    transform: scale3d(0.9, 0.9, 0.9);
   }
-
   50%, 55% {
     opacity: 1;
     transform: scale3d(1.1, 1.1, 1.1);
   }
-
   to {
     opacity: 0;
-    transform: scale3d(.3, .3, .3);
+    transform: scale3d(0.3, 0.3, 0.3);
   }
 }
-
 .bounceOut {
   animation-name: bounceOut;
 }
@@ -852,18 +1064,15 @@ footer{
   20% {
     transform: translate3d(0, 10px, 0);
   }
-
   40%, 45% {
     opacity: 1;
     transform: translate3d(0, -20px, 0);
   }
-
   to {
     opacity: 0;
     transform: translate3d(0, 2000px, 0);
   }
 }
-
 .bounceOutDown {
   animation-name: bounceOutDown;
 }
@@ -873,13 +1082,11 @@ footer{
     opacity: 1;
     transform: translate3d(20px, 0, 0);
   }
-
   to {
     opacity: 0;
     transform: translate3d(-2000px, 0, 0);
   }
 }
-
 .bounceOutLeft {
   animation-name: bounceOutLeft;
 }
@@ -889,13 +1096,11 @@ footer{
     opacity: 1;
     transform: translate3d(-20px, 0, 0);
   }
-
   to {
     opacity: 0;
     transform: translate3d(2000px, 0, 0);
   }
 }
-
 .bounceOutRight {
   animation-name: bounceOutRight;
 }
@@ -904,18 +1109,15 @@ footer{
   20% {
     transform: translate3d(0, -10px, 0);
   }
-
   40%, 45% {
     opacity: 1;
     transform: translate3d(0, 20px, 0);
   }
-
   to {
     opacity: 0;
     transform: translate3d(0, -2000px, 0);
   }
 }
-
 .bounceOutUp {
   animation-name: bounceOutUp;
 }
@@ -924,12 +1126,10 @@ footer{
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
 }
-
 .fadeIn {
   animation-name: fadeIn;
 }
@@ -939,13 +1139,11 @@ footer{
     opacity: 0;
     transform: translate3d(0, -100%, 0);
   }
-
   to {
     opacity: 1;
     transform: none;
   }
 }
-
 .fadeInDown {
   animation-name: fadeInDown;
 }
@@ -955,13 +1153,11 @@ footer{
     opacity: 0;
     transform: translate3d(0, -2000px, 0);
   }
-
   to {
     opacity: 1;
     transform: none;
   }
 }
-
 .fadeInDownBig {
   animation-name: fadeInDownBig;
 }
@@ -971,13 +1167,11 @@ footer{
     opacity: 0;
     transform: translate3d(-100%, 0, 0);
   }
-
   to {
     opacity: 1;
     transform: none;
   }
 }
-
 .fadeInLeft {
   animation-name: fadeInLeft;
 }
@@ -987,13 +1181,11 @@ footer{
     opacity: 0;
     transform: translate3d(-2000px, 0, 0);
   }
-
   to {
     opacity: 1;
     transform: none;
   }
 }
-
 .fadeInLeftBig {
   animation-name: fadeInLeftBig;
 }
@@ -1003,13 +1195,11 @@ footer{
     opacity: 0;
     transform: translate3d(100%, 0, 0);
   }
-
   to {
     opacity: 1;
     transform: none;
   }
 }
-
 .fadeInRight {
   animation-name: fadeInRight;
 }
@@ -1019,13 +1209,11 @@ footer{
     opacity: 0;
     transform: translate3d(2000px, 0, 0);
   }
-
   to {
     opacity: 1;
     transform: none;
   }
 }
-
 .fadeInRightBig {
   animation-name: fadeInRightBig;
 }
@@ -1035,13 +1223,11 @@ footer{
     opacity: 0;
     transform: translate3d(0, 100%, 0);
   }
-
   to {
     opacity: 1;
     transform: none;
   }
 }
-
 .fadeInUp {
   animation-name: fadeInUp;
 }
@@ -1051,13 +1237,11 @@ footer{
     opacity: 0;
     transform: translate3d(0, 2000px, 0);
   }
-
   to {
     opacity: 1;
     transform: none;
   }
 }
-
 .fadeInUpBig {
   animation-name: fadeInUpBig;
 }
@@ -1066,12 +1250,10 @@ footer{
   from {
     opacity: 1;
   }
-
   to {
     opacity: 0;
   }
 }
-
 .fadeOut {
   animation-name: fadeOut;
 }
@@ -1080,13 +1262,11 @@ footer{
   from {
     opacity: 1;
   }
-
   to {
     opacity: 0;
     transform: translate3d(0, 100%, 0);
   }
 }
-
 .fadeOutDown {
   animation-name: fadeOutDown;
 }
@@ -1095,13 +1275,11 @@ footer{
   from {
     opacity: 1;
   }
-
   to {
     opacity: 0;
     transform: translate3d(0, 2000px, 0);
   }
 }
-
 .fadeOutDownBig {
   animation-name: fadeOutDownBig;
 }
@@ -1110,13 +1288,11 @@ footer{
   from {
     opacity: 1;
   }
-
   to {
     opacity: 0;
     transform: translate3d(-100%, 0, 0);
   }
 }
-
 .fadeOutLeft {
   animation-name: fadeOutLeft;
 }
@@ -1125,13 +1301,11 @@ footer{
   from {
     opacity: 1;
   }
-
   to {
     opacity: 0;
     transform: translate3d(-2000px, 0, 0);
   }
 }
-
 .fadeOutLeftBig {
   animation-name: fadeOutLeftBig;
 }
@@ -1140,13 +1314,11 @@ footer{
   from {
     opacity: 1;
   }
-
   to {
     opacity: 0;
     transform: translate3d(100%, 0, 0);
   }
 }
-
 .fadeOutRight {
   animation-name: fadeOutRight;
 }
@@ -1155,13 +1327,11 @@ footer{
   from {
     opacity: 1;
   }
-
   to {
     opacity: 0;
     transform: translate3d(2000px, 0, 0);
   }
 }
-
 .fadeOutRightBig {
   animation-name: fadeOutRightBig;
 }
@@ -1170,13 +1340,11 @@ footer{
   from {
     opacity: 1;
   }
-
   to {
     opacity: 0;
     transform: translate3d(0, -100%, 0);
   }
 }
-
 .fadeOutUp {
   animation-name: fadeOutUp;
 }
@@ -1185,13 +1353,11 @@ footer{
   from {
     opacity: 1;
   }
-
   to {
     opacity: 0;
     transform: translate3d(0, -2000px, 0);
   }
 }
-
 .fadeOutUpBig {
   animation-name: fadeOutUpBig;
 }
@@ -1201,28 +1367,23 @@ footer{
     transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
     animation-timing-function: ease-out;
   }
-
   40% {
     transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
     animation-timing-function: ease-out;
   }
-
   50% {
     transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
     animation-timing-function: ease-in;
   }
-
   80% {
-    transform: perspective(400px) scale3d(.95, .95, .95);
+    transform: perspective(400px) scale3d(0.95, 0.95, 0.95);
     animation-timing-function: ease-in;
   }
-
   to {
     transform: perspective(400px);
     animation-timing-function: ease-in;
   }
 }
-
 .animated.flip {
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
@@ -1235,26 +1396,21 @@ footer{
     animation-timing-function: ease-in;
     opacity: 0;
   }
-
   40% {
     transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
     animation-timing-function: ease-in;
   }
-
   60% {
     transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
     opacity: 1;
   }
-
   80% {
     transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
   }
-
   to {
     transform: perspective(400px);
   }
 }
-
 .flipInX {
   -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
@@ -1267,26 +1423,21 @@ footer{
     animation-timing-function: ease-in;
     opacity: 0;
   }
-
   40% {
     transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
     animation-timing-function: ease-in;
   }
-
   60% {
     transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
     opacity: 1;
   }
-
   80% {
     transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
   }
-
   to {
     transform: perspective(400px);
   }
 }
-
 .flipInY {
   -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
@@ -1297,18 +1448,15 @@ footer{
   from {
     transform: perspective(400px);
   }
-
   30% {
     transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
     opacity: 1;
   }
-
   to {
     transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
     opacity: 0;
   }
 }
-
 .flipOutX {
   animation-name: flipOutX;
   -webkit-backface-visibility: visible !important;
@@ -1319,18 +1467,15 @@ footer{
   from {
     transform: perspective(400px);
   }
-
   30% {
     transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
     opacity: 1;
   }
-
   to {
     transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
     opacity: 0;
   }
 }
-
 .flipOutY {
   -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
@@ -1342,23 +1487,19 @@ footer{
     transform: translate3d(100%, 0, 0) skewX(-30deg);
     opacity: 0;
   }
-
   60% {
     transform: skewX(20deg);
     opacity: 1;
   }
-
   80% {
     transform: skewX(-5deg);
     opacity: 1;
   }
-
   to {
     transform: none;
     opacity: 1;
   }
 }
-
 .lightSpeedIn {
   animation-name: lightSpeedIn;
   animation-timing-function: ease-out;
@@ -1368,13 +1509,11 @@ footer{
   from {
     opacity: 1;
   }
-
   to {
     transform: translate3d(100%, 0, 0) skewX(30deg);
     opacity: 0;
   }
 }
-
 .lightSpeedOut {
   animation-name: lightSpeedOut;
   animation-timing-function: ease-in;
@@ -1386,14 +1525,12 @@ footer{
     transform: rotate3d(0, 0, 1, -200deg);
     opacity: 0;
   }
-
   to {
     transform-origin: center;
     transform: none;
     opacity: 1;
   }
 }
-
 .rotateIn {
   animation-name: rotateIn;
 }
@@ -1404,14 +1541,12 @@ footer{
     transform: rotate3d(0, 0, 1, -45deg);
     opacity: 0;
   }
-
   to {
     transform-origin: left bottom;
     transform: none;
     opacity: 1;
   }
 }
-
 .rotateInDownLeft {
   animation-name: rotateInDownLeft;
 }
@@ -1422,14 +1557,12 @@ footer{
     transform: rotate3d(0, 0, 1, 45deg);
     opacity: 0;
   }
-
   to {
     transform-origin: right bottom;
     transform: none;
     opacity: 1;
   }
 }
-
 .rotateInDownRight {
   animation-name: rotateInDownRight;
 }
@@ -1440,14 +1573,12 @@ footer{
     transform: rotate3d(0, 0, 1, 45deg);
     opacity: 0;
   }
-
   to {
     transform-origin: left bottom;
     transform: none;
     opacity: 1;
   }
 }
-
 .rotateInUpLeft {
   animation-name: rotateInUpLeft;
 }
@@ -1458,14 +1589,12 @@ footer{
     transform: rotate3d(0, 0, 1, -90deg);
     opacity: 0;
   }
-
   to {
     transform-origin: right bottom;
     transform: none;
     opacity: 1;
   }
 }
-
 .rotateInUpRight {
   animation-name: rotateInUpRight;
 }
@@ -1475,14 +1604,12 @@ footer{
     transform-origin: center;
     opacity: 1;
   }
-
   to {
     transform-origin: center;
     transform: rotate3d(0, 0, 1, 200deg);
     opacity: 0;
   }
 }
-
 .rotateOut {
   animation-name: rotateOut;
 }
@@ -1492,14 +1619,12 @@ footer{
     transform-origin: left bottom;
     opacity: 1;
   }
-
   to {
     transform-origin: left bottom;
     transform: rotate3d(0, 0, 1, 45deg);
     opacity: 0;
   }
 }
-
 .rotateOutDownLeft {
   animation-name: rotateOutDownLeft;
 }
@@ -1509,14 +1634,12 @@ footer{
     transform-origin: right bottom;
     opacity: 1;
   }
-
   to {
     transform-origin: right bottom;
     transform: rotate3d(0, 0, 1, -45deg);
     opacity: 0;
   }
 }
-
 .rotateOutDownRight {
   animation-name: rotateOutDownRight;
 }
@@ -1526,14 +1649,12 @@ footer{
     transform-origin: left bottom;
     opacity: 1;
   }
-
   to {
     transform-origin: left bottom;
     transform: rotate3d(0, 0, 1, -45deg);
     opacity: 0;
   }
 }
-
 .rotateOutUpLeft {
   animation-name: rotateOutUpLeft;
 }
@@ -1543,14 +1664,12 @@ footer{
     transform-origin: right bottom;
     opacity: 1;
   }
-
   to {
     transform-origin: right bottom;
     transform: rotate3d(0, 0, 1, 90deg);
     opacity: 0;
   }
 }
-
 .rotateOutUpRight {
   animation-name: rotateOutUpRight;
 }
@@ -1560,26 +1679,22 @@ footer{
     transform-origin: top left;
     animation-timing-function: ease-in-out;
   }
-
   20%, 60% {
     transform: rotate3d(0, 0, 1, 80deg);
     transform-origin: top left;
     animation-timing-function: ease-in-out;
   }
-
   40%, 80% {
     transform: rotate3d(0, 0, 1, 60deg);
     transform-origin: top left;
     animation-timing-function: ease-in-out;
     opacity: 1;
   }
-
   to {
     transform: translate3d(0, 700px, 0);
     opacity: 0;
   }
 }
-
 .hinge {
   animation-name: hinge;
 }
@@ -1590,56 +1705,46 @@ footer{
     transform: scale(0.1) rotate(30deg);
     transform-origin: center bottom;
   }
-
   50% {
     transform: rotate(-10deg);
   }
-
   70% {
     transform: rotate(3deg);
   }
-
   to {
     opacity: 1;
     transform: scale(1);
   }
 }
-
 .jackInTheBox {
   animation-name: jackInTheBox;
 }
 
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
-
 @keyframes rollIn {
   from {
     opacity: 0;
     transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
   }
-
   to {
     opacity: 1;
     transform: none;
   }
 }
-
 .rollIn {
   animation-name: rollIn;
 }
 
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
-
 @keyframes rollOut {
   from {
     opacity: 1;
   }
-
   to {
     opacity: 0;
     transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
   }
 }
-
 .rollOut {
   animation-name: rollOut;
 }
@@ -1647,14 +1752,12 @@ footer{
 @keyframes zoomIn {
   from {
     opacity: 0;
-    transform: scale3d(.3, .3, .3);
+    transform: scale3d(0.3, 0.3, 0.3);
   }
-
   50% {
     opacity: 1;
   }
 }
-
 .zoomIn {
   animation-name: zoomIn;
 }
@@ -1662,17 +1765,15 @@ footer{
 @keyframes zoomInDown {
   from {
     opacity: 0;
-    transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
-    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
-
   60% {
     opacity: 1;
-    transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
-
 .zoomInDown {
   animation-name: zoomInDown;
 }
@@ -1680,17 +1781,15 @@ footer{
 @keyframes zoomInLeft {
   from {
     opacity: 0;
-    transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
-    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
-
   60% {
     opacity: 1;
-    transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
-
 .zoomInLeft {
   animation-name: zoomInLeft;
 }
@@ -1698,17 +1797,15 @@ footer{
 @keyframes zoomInRight {
   from {
     opacity: 0;
-    transform: scale3d(.1, .1, .1) translate3d(1000px, 0, 0);
-    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
-
   60% {
     opacity: 1;
-    transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
-
 .zoomInRight {
   animation-name: zoomInRight;
 }
@@ -1716,17 +1813,15 @@ footer{
 @keyframes zoomInUp {
   from {
     opacity: 0;
-    transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
-    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
-
   60% {
     opacity: 1;
-    transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
-
 .zoomInUp {
   animation-name: zoomInUp;
 }
@@ -1735,17 +1830,14 @@ footer{
   from {
     opacity: 1;
   }
-
   50% {
     opacity: 0;
-    transform: scale3d(.3, .3, .3);
+    transform: scale3d(0.3, 0.3, 0.3);
   }
-
   to {
     opacity: 0;
   }
 }
-
 .zoomOut {
   animation-name: zoomOut;
 }
@@ -1753,18 +1845,16 @@ footer{
 @keyframes zoomOutDown {
   40% {
     opacity: 1;
-    transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
-    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
-
   to {
     opacity: 0;
-    transform: scale3d(.1, .1, .1) translate3d(0, 2000px, 0);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
     transform-origin: center bottom;
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
-
 .zoomOutDown {
   animation-name: zoomOutDown;
 }
@@ -1772,16 +1862,14 @@ footer{
 @keyframes zoomOutLeft {
   40% {
     opacity: 1;
-    transform: scale3d(.475, .475, .475) translate3d(42px, 0, 0);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(42px, 0, 0);
   }
-
   to {
     opacity: 0;
-    transform: scale(.1) translate3d(-2000px, 0, 0);
+    transform: scale(0.1) translate3d(-2000px, 0, 0);
     transform-origin: left center;
   }
 }
-
 .zoomOutLeft {
   animation-name: zoomOutLeft;
 }
@@ -1789,16 +1877,14 @@ footer{
 @keyframes zoomOutRight {
   40% {
     opacity: 1;
-    transform: scale3d(.475, .475, .475) translate3d(-42px, 0, 0);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(-42px, 0, 0);
   }
-
   to {
     opacity: 0;
-    transform: scale(.1) translate3d(2000px, 0, 0);
+    transform: scale(0.1) translate3d(2000px, 0, 0);
     transform-origin: right center;
   }
 }
-
 .zoomOutRight {
   animation-name: zoomOutRight;
 }
@@ -1806,18 +1892,16 @@ footer{
 @keyframes zoomOutUp {
   40% {
     opacity: 1;
-    transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
-    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
-
   to {
     opacity: 0;
-    transform: scale3d(.1, .1, .1) translate3d(0, -2000px, 0);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -2000px, 0);
     transform-origin: center bottom;
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
-
 .zoomOutUp {
   animation-name: zoomOutUp;
 }
@@ -1827,12 +1911,10 @@ footer{
     transform: translate3d(0, -100%, 0);
     visibility: visible;
   }
-
   to {
     transform: translate3d(0, 0, 0);
   }
 }
-
 .slideInDown {
   animation-name: slideInDown;
 }
@@ -1842,12 +1924,10 @@ footer{
     transform: translate3d(-100%, 0, 0);
     visibility: visible;
   }
-
   to {
     transform: translate3d(0, 0, 0);
   }
 }
-
 .slideInLeft {
   animation-name: slideInLeft;
 }
@@ -1857,12 +1937,10 @@ footer{
     transform: translate3d(100%, 0, 0);
     visibility: visible;
   }
-
   to {
     transform: translate3d(0, 0, 0);
   }
 }
-
 .slideInRight {
   animation-name: slideInRight;
 }
@@ -1872,12 +1950,10 @@ footer{
     transform: translate3d(0, 100%, 0);
     visibility: visible;
   }
-
   to {
     transform: translate3d(0, 0, 0);
   }
 }
-
 .slideInUp {
   animation-name: slideInUp;
 }
@@ -1886,13 +1962,11 @@ footer{
   from {
     transform: translate3d(0, 0, 0);
   }
-
   to {
     visibility: hidden;
     transform: translate3d(0, 100%, 0);
   }
 }
-
 .slideOutDown {
   animation-name: slideOutDown;
 }
@@ -1901,13 +1975,11 @@ footer{
   from {
     transform: translate3d(0, 0, 0);
   }
-
   to {
     visibility: hidden;
     transform: translate3d(-100%, 0, 0);
   }
 }
-
 .slideOutLeft {
   animation-name: slideOutLeft;
 }
@@ -1916,13 +1988,11 @@ footer{
   from {
     transform: translate3d(0, 0, 0);
   }
-
   to {
     visibility: hidden;
     transform: translate3d(100%, 0, 0);
   }
 }
-
 .slideOutRight {
   animation-name: slideOutRight;
 }
@@ -1931,13 +2001,11 @@ footer{
   from {
     transform: translate3d(0, 0, 0);
   }
-
   to {
     visibility: hidden;
     transform: translate3d(0, -100%, 0);
   }
 }
-
 .slideOutUp {
   animation-name: slideOutUp;
 }
@@ -1946,6 +2014,7 @@ footer{
   width: 100%;
   height: 100%;
 }
+
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -1964,3 +2033,5 @@ footer{
   -webkit-align-items: center;
   align-items: center;
 }
+
+/*# sourceMappingURL=screen.css.map */

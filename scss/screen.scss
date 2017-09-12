@@ -36,23 +36,6 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
 }
-.container--justify-end{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-.container--wrap-no{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-.container--grow-1{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex-grow: 1;
-}
 .phoneNumber{
   font-size: 16px;
   color: #aeaeae;
@@ -114,6 +97,7 @@ body {
 .slidesContainer {
   .slides {
     .slide {
+      text-align: left;
       .sliderLeft {
         display: flex;
         flex-direction: row;
@@ -242,6 +226,7 @@ body {
   }
 }
 .feature{
+  margin: 0 15px;
   div{
     margin: 0 auto 15px;
   }
@@ -298,7 +283,6 @@ body {
     flex-direction: column;
     align-items: flex-start;
     h2{
-      font-size: 64px;
       z-index: 99;
       max-width: 430px;
       @include title(64px, #000000, false, false);
@@ -362,15 +346,105 @@ footer{
   background-color: $red!important;
 }
 
-@charset "UTF-8";
+@media screen and (max-width: 758px) and (min-width:10px) {
+  .slidesContainer {
+    .slides {
+      .slide {
+        .sliderLeft{
+          align-items: flex-end;
+          .sliderLeft__text{
+            margin-bottom: 80px;
+          }
+        }
+        .sliderRight {
+          width: 22%;
+          background: #ff343d;
+          padding-right: 10%;
+          display: flex;
+          align-items: center;
+          .sliderRight__imgContainer {
+            width: 200px;
+            position: relative;
+            div {
+              background-color: #ffffff;
+              border-radius: 50%;
+              height: 200px;
+              width: 200px;
+              text-align: center;
+              margin-left: -50%;
+              position: relative;
+              img {
+                width: 150%;
+                height: auto;
+                margin-left: -25%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .features__container{
+    justify-content: center!important;
+  }
+  .visionGeneration{
+    .visionGenerationLeft{
+      min-width: 220px;
+    }
+    .visionGenerationRight{
+      min-width: 220px;
+      @include backgroundImage("../images/droneC.png", cover);
+      h2{
+        max-width: 430px;
+        @include title(38px, #ffffff, false, false);
+      }
+    }
+  }
+  .fly{
+    .flyLeft{
+      min-width: 187px;
+      width: 18%;
+      padding: 140px 2% 140px 5%;
+      @include backgroundImage("../images/droneB.png", cover);
+    }
+    .flyRight{
+      min-width: 220px;
+      padding-right: 5%;
+      .flyRight__imageHover{
+        width: 39%;
+        padding: 20% 1%;
+        h2{
+          @include title(38px, #ffffff, false, false);
+        }
+      }
+    }
+  }
+  .flyGeneration {
+    .flyGenerationLeft {
+      min-width: 220px;
+      padding-bottom: 0;
+      h2 {
+        z-index: 99;
+        @include title(38px, #000000, false, false);
+      }
+    }
+    .flyGenerationRight{
+      min-width: 220px;
+      width: 100%;
+      padding: 0;
+    }
+  }
+  .journey {
+    h2 {
+      font-size: 38px !important;
+    }
+  }
+}
 
-/*!
- * animate.css -http://daneden.me/animate
- * Version - 3.5.2
- * Licensed under the MIT license - http://opensource.org/licenses/MIT
- *
- * Copyright (c) 2017 Daniel Eden
- */
+
+
+
+
 
 .animated {
   animation-duration: 1s;
